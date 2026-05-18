@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sacred Calling — Ministry to Christian Leaders</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ── Tailwind-equivalent utility CSS ── */
+    .fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.top-0{top:0}.top-1\/3{top:33.333%}.top-6{top:1.5rem}.bottom-0{bottom:0}.bottom-6{bottom:1.5rem}.bottom-10{bottom:2.5rem}.left-0{left:0}.left-1\/2{left:50%}.right-0{right:0}.right-6{right:1.5rem}.right-8{right:2rem}.right-16{right:4rem}.-bottom-6{bottom:-1.5rem}.-left-8{left:-2rem}.z-10{z-index:10}.z-50{z-index:50}
+    .flex{display:flex}.grid{display:grid}.block{display:block}.hidden{display:none}.inline-flex{display:inline-flex}
+    .flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.flex-shrink-0{flex-shrink:0}
+    .items-center{align-items:center}.items-start{align-items:flex-start}.justify-center{justify-content:center}.justify-between{justify-content:space-between}
+    .gap-0{gap:0}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.gap-12{gap:3rem}.gap-16{gap:4rem}.gap-20{gap:5rem}
+    .grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.col-span-2{grid-column:span 2/span 2}
+    .space-y-0>*+*{margin-top:0}.space-y-3>*+*{margin-top:0.75rem}.space-y-4>*+*{margin-top:1rem}.space-y-5>*+*{margin-top:1.25rem}
+    .w-4{width:1rem}.w-6{width:1.5rem}.w-8{width:2rem}.w-9{width:2.25rem}.w-10{width:2.5rem}.w-12{width:3rem}.w-72{width:18rem}.w-96{width:24rem}.w-full{width:100%}.w-px{width:1px}
+    .h-0\.5{height:0.125rem}.h-8{height:2rem}.h-9{height:2.25rem}.h-10{height:2.5rem}.h-96{height:24rem}.h-full{height:100%}.h-px{height:1px}
+    .min-h-screen{min-height:100vh}
+    .max-w-4xl{max-width:56rem}.max-w-7xl{max-width:80rem}.max-w-xl{max-width:36rem}.max-w-xs{max-width:20rem}
+    .mx-auto{margin-left:auto;margin-right:auto}.mx-16{margin-left:4rem;margin-right:4rem}
+    .mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mt-12{margin-top:3rem}
+    .mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-14{margin-bottom:3.5rem}.mb-20{margin-bottom:5rem}
+    .p-2{padding:0.5rem}.p-6{padding:1.5rem}.p-8{padding:2rem}
+    .px-3{padding-left:0.75rem;padding-right:0.75rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}
+    .py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.py-8{padding-top:2rem;padding-bottom:2rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-28{padding-top:7rem;padding-bottom:7rem}.py-32{padding-top:8rem;padding-bottom:8rem}
+    .text-xs{font-size:0.75rem;line-height:1rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-5xl{font-size:3rem;line-height:1}.text-6xl{font-size:3.75rem;line-height:1}
+    .font-light{font-weight:300}.font-medium{font-weight:500}.font-body{font-family:'DM Sans',sans-serif}.font-display{font-family:'Cormorant Garamond',serif}
+    .italic{font-style:italic}
+    .leading-none{line-height:1}.leading-relaxed{line-height:1.625}
+    .tracking-widest{letter-spacing:0.1em}
+    .uppercase{text-transform:uppercase}
+    .text-center{text-align:center}.text-left{text-align:left}
+    .text-navy-deep{color:#1C2B3A}
+    .bg-white{background-color:#ffffff}.bg-white\/5{background-color:rgba(255,255,255,0.05)}.bg-navy-deep{background-color:#1C2B3A}
+    .bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}.from-navy-deep{--tw-gradient-from:#1C2B3A;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.to-transparent{--tw-gradient-to:transparent}
+    .border{border-width:1px;border-style:solid}.border-2{border-width:2px;border-style:solid}.border-b{border-bottom-width:1px;border-bottom-style:solid}.border-t{border-top-width:1px;border-top-style:solid}
+    .border-white\/10{border-color:rgba(255,255,255,0.1)}
+    .rounded{border-radius:0.25rem}.rounded-sm{border-radius:0.125rem}.rounded-full{border-radius:9999px}
+    .shadow-xl{box-shadow:0 20px 25px -5px rgba(0,0,0,0.1),0 8px 10px -6px rgba(0,0,0,0.1)}.shadow-2xl{box-shadow:0 25px 50px -12px rgba(0,0,0,0.25)}
+    .overflow-hidden{overflow:hidden}
+    .pointer-events-none{pointer-events:none}
+    .opacity-5{opacity:0.05}.opacity-10{opacity:0.10}.opacity-20{opacity:0.20}.opacity-40{opacity:0.40}
+    .transition-all{transition:all 0.15s ease}.transition-colors{transition:color 0.15s ease,background-color 0.15s ease,border-color 0.15s ease}
+    .duration-500{transition-duration:500ms}
+    .aspect-video{aspect-ratio:16/9}.aspect-square{aspect-ratio:1}
+    .-translate-x-1\/2{transform:translateX(-50%)}
+    .hover\:text-white:hover{color:#ffffff}
+    .hover\:border-gold-muted:hover{border-color:#A8904A}
+
+    /* Aspect ratio for [4/5] */
+    .aspect-\[4\/5\]{aspect-ratio:4/5}
+
+    /* Responsive */
+    @media(min-width:768px){
+      .md\:block{display:block}.md\:flex{display:flex}.md\:hidden{display:none}
+      .md\:flex-row{flex-direction:row}
+      .md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .md\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}
+      .md\:col-span-4{grid-column:span 4/span 4}
+      .md\:col-span-6{grid-column:span 6/span 6}
+      .md\:col-span-8{grid-column:span 8/span 8}
+      .md\:px-16{padding-left:4rem;padding-right:4rem}
+      .md\:py-36{padding-top:9rem;padding-bottom:9rem}
+      .md\:py-40{padding-top:10rem;padding-bottom:10rem}
+      .md\:right-24{right:6rem}
+      .md\:text-xl{font-size:1.25rem;line-height:1.75rem}
+      .md\:text-3xl{font-size:1.875rem;line-height:2.25rem}
+      .md\:text-6xl{font-size:3.75rem;line-height:1}
+      .md\:text-7xl{font-size:4.5rem;line-height:1}
+    }
+    @media(min-width:1024px){
+      .lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+      .lg\:text-8xl{font-size:6rem;line-height:1}
+    }
+  </style>
+  <style>
+    :root {
+      --gold: #A8904A;
+      --navy: #1C2B3A;
+      --sage: #3D5442;
+      --sand: #FAF8F4;
+      --sand-2: #F0EBE1;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--sand);
+      color: var(--navy);
+      overflow-x: hidden;
+    }
+
+    /* ── Parallax Hero ── */
+    .hero-parallax-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 60% 40%, rgba(168,144,74,0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 80% at 20% 70%, rgba(61,84,66,0.06) 0%, transparent 60%),
+        linear-gradient(160deg, #F7F3EC 0%, #EDE6D8 50%, #E8DDD0 100%);
+      will-change: transform;
+    }
+
+    .hero-light-ray {
+      position: absolute;
+      top: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 140%;
+      background: linear-gradient(to bottom, transparent, rgba(168,144,74,0.18), transparent);
+      will-change: transform;
+    }
+
+    /* ── Scroll Reveal ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ── Nav ── */
+    .nav-scrolled {
+      background: rgba(250,248,244,0.95) !important;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(168,144,74,0.15);
+      box-shadow: 0 2px 24px rgba(28,43,58,0.06);
+    }
+
+    /* ── Buttons ── */
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--navy);
+      color: #FAF8F4;
+      padding: 14px 32px;
+      border-radius: 2px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: var(--gold);
+      transform: translateX(-101%);
+      transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+      z-index: 0;
+    }
+    .btn-primary:hover::after { transform: translateX(0); }
+    .btn-primary span { position: relative; z-index: 1; }
+
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid rgba(28,43,58,0.3);
+      color: var(--navy);
+      padding: 13px 31px;
+      border-radius: 2px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+    }
+    .btn-ghost:hover {
+      background: var(--navy);
+      color: #FAF8F4;
+      border-color: var(--navy);
+    }
+
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold);
+      color: #FAF8F4;
+      padding: 14px 32px;
+      border-radius: 2px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-gold:hover { background: #8C7A3D; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(168,144,74,0.3); }
+
+    /* ── Section Divider ── */
+    .section-eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ── Cards ── */
+    .service-card {
+      background: white;
+      border: 1px solid rgba(232,223,208,0.8);
+      padding: 40px 36px;
+      border-radius: 4px;
+      transition: all 0.4s cubic-bezier(0.16,1,0.3,1);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--sage));
+      transform: scaleX(0);
+      transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+      transform-origin: left;
+    }
+    .service-card:hover {
+      box-shadow: 0 16px 48px rgba(28,43,58,0.10);
+      transform: translateY(-4px);
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+
+    .value-card {
+      padding: 40px 32px;
+      border-top: 1px solid rgba(168,144,74,0.25);
+      transition: all 0.3s ease;
+    }
+    .value-card:hover { background: rgba(255,255,255,0.7); }
+
+    /* ── Image placeholders ── */
+    .img-placeholder {
+      background: linear-gradient(135deg, #E8DDD0 0%, #D4C8B5 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::after {
+      content: attr(data-label);
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', monospace;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: rgba(28,43,58,0.35);
+      text-transform: uppercase;
+    }
+
+    /* ── Quote Mark ── */
+    .big-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 120px;
+      line-height: 0.8;
+      color: rgba(168,144,74,0.12);
+      font-style: italic;
+    }
+
+    /* ── Input ── */
+    .form-input {
+      width: 100%;
+      border: 1px solid rgba(28,43,58,0.15);
+      background: white;
+      padding: 14px 18px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: var(--navy);
+      border-radius: 2px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    .form-input:focus { border-color: var(--gold); }
+    .form-input::placeholder { color: rgba(28,43,58,0.35); }
+
+    /* ── Cross motif ── */
+    .cross-mark {
+      display: inline-block;
+      width: 20px; height: 20px;
+      position: relative;
+    }
+    .cross-mark::before, .cross-mark::after {
+      content: '';
+      position: absolute;
+      background: var(--gold);
+      border-radius: 1px;
+    }
+    .cross-mark::before { width: 2px; height: 100%; left: 50%; top: 0; transform: translateX(-50%); }
+    .cross-mark::after { width: 100%; height: 2px; top: 35%; left: 0; }
+
+    /* ── Horizontal Rule ── */
+    .hr-gold {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      border: none;
+      margin: 0;
+    }
+
+    /* ── Floating nav links ── */
+    .nav-link {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--navy);
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .nav-link:hover { opacity: 1; }
+
+    /* ── Mobile menu ── */
+    #mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--sand);
+      z-index: 200;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+    #mobile-menu.open { display: flex; }
+    .mobile-nav-link {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 300;
+      color: var(--navy);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .mobile-nav-link:hover { color: var(--gold); }
+
+    /* ── Parallax layers ── */
+    .parallax-slow { will-change: transform; }
+    .parallax-mid  { will-change: transform; }
+
+    /* ── Gather section images ── */
+    .gather-img {
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    /* ── Stats ── */
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 72px;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--navy);
+    }
+
+    /* Partnership bg */
+    .partner-bg {
+      background:
+        linear-gradient(135deg, #1C2B3A 0%, #2C3E50 60%, #1A3028 100%);
+    }
+
+    /* Scripture pull quote */
+    .scripture-pull {
+      border-left: 2px solid var(--gold);
+      padding-left: 28px;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      .big-quote { font-size: 64px; }
+      .stat-num { font-size: 48px; }
+    }
+  </style>
+
+<template id="__bundler_thumbnail" data-bg-color="#FAF8F4">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="1200" height="800" fill="#FAF8F4"/>
+    <!-- Cross motif -->
+    <rect x="582" y="160" width="36" height="260" rx="6" fill="#A8904A" opacity="0.7"/>
+    <rect x="480" y="248" width="240" height="36" rx="6" fill="#A8904A" opacity="0.7"/>
+    <!-- Wordmark placeholder -->
+    <rect x="340" y="480" width="520" height="24" rx="4" fill="#1C2B3A" opacity="0.15"/>
+    <rect x="420" y="524" width="360" height="16" rx="4" fill="#1C2B3A" opacity="0.1"/>
+    <!-- CTA -->
+    <rect x="460" y="580" width="180" height="44" rx="2" fill="#1C2B3A" opacity="0.8"/>
+    <rect x="660" y="580" width="180" height="44" rx="2" fill="none" stroke="#1C2B3A" stroke-width="2" opacity="0.4"/>
+  </svg>
+</template>
+</head>
+<body class="font-body">
+
+<!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 px-8 py-5 flex items-center justify-between transition-all duration-500">
+  <a href="#" class="flex items-center gap-3 group">
+    <div class="cross-mark" style="width:16px;height:16px;"></div>
+    <span class="font-display text-xl font-light tracking-widest text-navy-deep uppercase" style="letter-spacing:0.22em;font-size:15px;">Sacred Calling</span>
+  </a>
+
+  <!-- Desktop nav -->
+  <div class="hidden md:flex items-center gap-8">
+    <a href="#mission" class="nav-link">Mission</a>
+    <a href="#services" class="nav-link">What We Do</a>
+    <a href="#values" class="nav-link">Our Commitments</a>
+    <a href="#community" class="nav-link">Community</a>
+    <a href="#partner" class="nav-link">Partner</a>
+  </div>
+
+  <div class="hidden md:flex items-center gap-4">
+    <a href="#connect" class="btn-primary text-xs py-3 px-6"><span>Stay Connected</span></a>
+  </div>
+
+  <!-- Mobile hamburger -->
+  <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" onclick="toggleMenu()">
+    <span class="block w-6 h-0.5 bg-navy-deep transition-all"></span>
+    <span class="block w-6 h-0.5 bg-navy-deep transition-all"></span>
+    <span class="block w-4 h-0.5 bg-navy-deep transition-all"></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu">
+  <button onclick="toggleMenu()" class="absolute top-6 right-8 text-navy-deep">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <a class="mobile-nav-link" href="#mission" onclick="toggleMenu()">Mission</a>
+  <a class="mobile-nav-link" href="#services" onclick="toggleMenu()">What We Do</a>
+  <a class="mobile-nav-link" href="#values" onclick="toggleMenu()">Our Commitments</a>
+  <a class="mobile-nav-link" href="#community" onclick="toggleMenu()">Community</a>
+  <a class="mobile-nav-link" href="#partner" onclick="toggleMenu()">Partner</a>
+  <a class="mobile-nav-link" href="#connect" onclick="toggleMenu()">Stay Connected</a>
+</div>
+
+
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<section class="relative min-h-screen flex items-center overflow-hidden">
+  <!-- Parallax background -->
+  <div class="hero-parallax-bg parallax-slow" id="hero-bg"></div>
+
+  <!-- Decorative light rays -->
+  <div class="hero-light-ray parallax-mid" id="light-ray-1" style="left:38%;opacity:0.6;"></div>
+  <div class="hero-light-ray parallax-mid" id="light-ray-2" style="left:62%;opacity:0.4;width:2px;"></div>
+
+  <!-- Decorative cross -->
+  <div class="absolute top-1/3 right-16 md:right-24 opacity-5 parallax-slow" style="transform:rotate(8deg);">
+    <svg width="200" height="280" viewBox="0 0 200 280" fill="none">
+      <rect x="90" y="0" width="20" height="280" rx="4" fill="#1C2B3A"/>
+      <rect x="0" y="80" width="200" height="20" rx="4" fill="#1C2B3A"/>
+    </svg>
+  </div>
+
+  <!-- Subtle circular gradient orb -->
+  <div class="absolute bottom-0 right-0 w-96 h-96 opacity-20 pointer-events-none" style="background:radial-gradient(circle, #A8904A 0%, transparent 70%); border-radius:50%; transform:translate(30%, 30%);"></div>
+
+  <!-- Hero content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-8 md:px-16 py-32 grid md:grid-cols-2 gap-16 items-center w-full">
+    <div>
+      <!-- Eyebrow -->
+      <div class="section-eyebrow mb-8 reveal">A Ministry to Christian Leaders</div>
+
+      <!-- Headline -->
+      <h1 class="font-display text-6xl md:text-7xl lg:text-8xl font-light leading-none mb-8 reveal reveal-delay-1" style="color:#1C2B3A; letter-spacing:-0.01em; line-height:1.0;">
+        A Sacred<br/>
+        <em style="font-style:italic; color:#A8904A;">Calling</em><br/>
+        for Those<br/>
+        Who Lead
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-lg md:text-xl leading-relaxed mb-4 reveal reveal-delay-2" style="color:#4A6080; max-width:520px; font-weight:300;">
+        Sacred Calling is a Christian nonprofit devoted to strengthening Christian leaders through spiritual formation, mentorship, biblical care, and Christ-centered community.
+      </p>
+
+      <!-- Scripture -->
+      <p class="font-display italic text-xl mb-10 reveal reveal-delay-2" style="color:#A8904A; font-weight:400;">
+        "Follow Me. Feed Them."
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-wrap gap-4 reveal reveal-delay-3">
+        <a href="#connect" class="btn-primary"><span>Stay Connected</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#partner" class="btn-ghost">Support the Mission</a>
+      </div>
+    </div>
+
+    <!-- Hero image placeholder -->
+    <div class="reveal reveal-delay-2 hidden md:block">
+      <div class="relative">
+        <!-- Main image -->
+        <div class="w-full aspect-[4/5] rounded-sm overflow-hidden relative">
+          <img src="uploads/IMG_7101.jpg" alt="Dr. Bryan Davenport speaking" style="width:100%;height:100%;object-fit:cover;object-position:center top;"/>
+        </div>
+        <!-- Floating quote card -->
+        <div class="absolute -bottom-6 -left-8 bg-white p-6 shadow-xl max-w-xs" style="border-radius:2px;">
+          <div class="font-display italic text-base mb-2" style="color:#1C2B3A; font-size:18px; line-height:1.4;">
+            "True ministry begins in communion with Christ."
+          </div>
+          <div class="section-eyebrow" style="font-size:10px;">Sacred Calling</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
+    <span class="text-xs tracking-widest uppercase font-body" style="font-size:10px; color:#1C2B3A; letter-spacing:0.2em;">Scroll</span>
+    <div class="w-px h-10 bg-gradient-to-b from-navy-deep to-transparent" style="background:linear-gradient(to bottom, #1C2B3A, transparent);"></div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════ MISSION ═══════════════════════════════ -->
+<section id="mission" class="py-28 md:py-36 bg-white">
+  <div class="max-w-7xl mx-auto px-8 md:px-16">
+    <div class="grid md:grid-cols-12 gap-16 items-start">
+      <!-- Left: label + decorative -->
+      <div class="md:col-span-4 reveal">
+        <div class="section-eyebrow mb-6">Our Purpose</div>
+        <div class="big-quote">"</div>
+        <div class="mt-4 w-12 h-px" style="background:var(--gold);"></div>
+      </div>
+
+      <!-- Right: content -->
+      <div class="md:col-span-8">
+        <h2 class="font-display text-5xl md:text-6xl font-light mb-10 reveal" style="color:#1C2B3A; line-height:1.1;">
+          Why Sacred<br/>Calling Exists
+        </h2>
+
+        <div class="scripture-pull mb-10 reveal reveal-delay-1">
+          <p class="font-display text-2xl md:text-3xl font-light" style="color:#1C2B3A; line-height:1.5;">
+            Sacred Calling exists as a ministry to and for Christian leaders — to foster devotion to Christ and faithful service in His name.
+          </p>
+        </div>
+
+        <p class="text-lg leading-relaxed mb-6 reveal reveal-delay-2" style="color:#4A6080; font-weight:300;">
+          In a time when many leaders carry deep burdens, Sacred Calling seeks to provide a place of renewal, clarity, encouragement, and strengthening. This ministry is centered on helping leaders remain close to Jesus while serving others with wisdom, mercy, and faithfulness.
+        </p>
+
+        <p class="text-lg leading-relaxed reveal reveal-delay-3" style="color:#4A6080; font-weight:300;">
+          We are guided by two simple but profound commands of Christ — <em class="font-display italic" style="color:#A8904A;">Follow Me</em> and <em class="font-display italic" style="color:#A8904A;">Feed Them</em> — and we believe these form the heartbeat of faithful Christian leadership.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="hr-gold mx-16"/>
+
+<!-- ═══════════════════════════════ SERVICES ═══════════════════════════════ -->
+<section id="services" class="py-28 md:py-36" style="background:var(--sand);">
+  <div class="max-w-7xl mx-auto px-8 md:px-16">
+    <div class="text-center mb-20 reveal">
+      <div class="section-eyebrow mb-5">What We Do</div>
+      <h2 class="font-display text-5xl md:text-6xl font-light" style="color:#1C2B3A; line-height:1.1;">How We Serve</h2>
+      <p class="mt-6 text-lg font-light mx-auto" style="max-width:520px; color:#4A6080;">
+        Sacred Calling comes alongside Christian leaders in four essential ways — meeting them where they are.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Card 1 -->
+      <div class="service-card reveal reveal-delay-1">
+        <div class="mb-6">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="17" stroke="#A8904A" stroke-width="1"/>
+            <path d="M18 8v12M14 16l4 4 4-4" stroke="#A8904A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="18" cy="26" r="2" fill="#A8904A"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-2xl font-medium mb-4" style="color:#1C2B3A; line-height:1.2;">Spiritual<br/>Direction</h3>
+        <div class="w-8 h-px mb-5" style="background:#A8904A;"></div>
+        <p class="text-sm leading-relaxed font-light" style="color:#4A6080;">
+          Helping leaders slow down, listen to God, and cultivate deeper attentiveness to the presence of Jesus. In a world of noise, we make space for the still small voice.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card reveal reveal-delay-2">
+        <div class="mb-6">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="17" stroke="#3D5442" stroke-width="1"/>
+            <circle cx="13" cy="15" r="4" stroke="#3D5442" stroke-width="1.5"/>
+            <circle cx="23" cy="15" r="4" stroke="#3D5442" stroke-width="1.5"/>
+            <path d="M6 27c0-4 3-6 7-6h10c4 0 7 2 7 6" stroke="#3D5442" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-2xl font-medium mb-4" style="color:#1C2B3A; line-height:1.2;">Mentorship &<br/>Formation</h3>
+        <div class="w-8 h-px mb-5" style="background:#3D5442;"></div>
+        <p class="text-sm leading-relaxed font-light" style="color:#4A6080;">
+          Encouraging healthy growth through intentional relationships, guidance, and ministry support. Formation happens in the context of faithful community.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card reveal reveal-delay-3">
+        <div class="mb-6">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="17" stroke="#A8904A" stroke-width="1"/>
+            <path d="M12 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#A8904A" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M18 26v-6M15 23l3 3 3-3" stroke="#A8904A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-2xl font-medium mb-4" style="color:#1C2B3A; line-height:1.2;">Biblical<br/>Counseling</h3>
+        <div class="w-8 h-px mb-5" style="background:#A8904A;"></div>
+        <p class="text-sm leading-relaxed font-light" style="color:#4A6080;">
+          Providing biblically grounded care, encouragement, and support for leaders navigating the real pressures and challenges of faithful ministry life.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card reveal reveal-delay-4">
+        <div class="mb-6">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="17" stroke="#3D5442" stroke-width="1"/>
+            <path d="M10 22L18 10l8 12" stroke="#3D5442" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 22h20" stroke="#3D5442" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-2xl font-medium mb-4" style="color:#1C2B3A; line-height:1.2;">Gatherings &<br/>Community</h3>
+        <div class="w-8 h-px mb-5" style="background:#3D5442;"></div>
+        <p class="text-sm leading-relaxed font-light" style="color:#4A6080;">
+          Hosting conferences, local meetings, and ministry environments that strengthen devotion, service, and fellowship among Christian leaders.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════ VALUES ═══════════════════════════════ -->
+<section id="values" class="py-28 md:py-36 bg-white">
+  <div class="max-w-7xl mx-auto px-8 md:px-16">
+    <div class="mb-20 reveal">
+      <div class="section-eyebrow mb-5">What Guides Us</div>
+      <h2 class="font-display text-5xl md:text-6xl font-light" style="color:#1C2B3A; line-height:1.1;">Our Commitments</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-0">
+      <!-- Value 1 -->
+      <div class="value-card reveal reveal-delay-1">
+        <div class="mb-3 text-5xl font-display font-light italic" style="color:rgba(168,144,74,0.3);">01</div>
+        <h3 class="font-display text-2xl font-medium mb-4" style="color:#1C2B3A;">The Presence<br/>of Jesus</h3>
+        <div class="w-8 h-px mb-5" style="background:#A8904A;"></div>
+        <p class="text-sm leading-relaxed font-light" style="color:#4A6080;">
+          We believe true ministry begins — and is sustained — in communion with Christ. Everything flows from His presence.
+        </p>
+      </div>
+
+      <!-- Value 2 -->
+      <div class="value-card reveal reveal-delay-2" style="border-top-color:rgba(61,84,66,0.25);">
+        <div class="mb-3 text-5xl font-display font-light italic" style="color:rgba(61,84,66,0.25);">02</div>
+        <h3 class="font-display text-2xl font-medium mb-4" style="color:#1C2B3A;">A Culture<br/>of Grace</h3>
+        <div class="w-8 h-px mb-5" style="background:#3D5442;"></div>
+        <p class="text-sm leading-relaxed font-light" style="color:#4A6080;">
+          We want every interaction to reflect the kindness and truth of Jesus — a culture where leaders find welcome, not judgment.
+        </p>
+      </div>
+
+      <!-- Value 3 -->
+      <div class="value-card reveal reveal-delay-3">
+        <div class="mb-3 text-5xl font-display font-light italic" style="color:rgba(168,144,74,0.3);">03</div>
+        <h3 class="font-display text-2xl font-medium mb-4" style="color:#1C2B3A;">A Mission<br/>of Mercy</h3>
+        <div class="w-8 h-px mb-5" style="background:#A8904A;"></div>
+        <p class="text-sm leading-relaxed font-light" style="color:#4A6080;">
+          We are called to serve others with compassion, humility, and love — mercy shaped by the heart of the Good Shepherd.
+        </p>
+      </div>
+
+      <!-- Value 4 -->
+      <div class="value-card reveal reveal-delay-4" style="border-top-color:rgba(61,84,66,0.25);">
+        <div class="mb-3 text-5xl font-display font-light italic" style="color:rgba(61,84,66,0.25);">04</div>
+        <h3 class="font-display text-2xl font-medium mb-4" style="color:#1C2B3A;">A Commitment to Righteousness</h3>
+        <div class="w-8 h-px mb-5" style="background:#3D5442;"></div>
+        <p class="text-sm leading-relaxed font-light" style="color:#4A6080;">
+          We pursue integrity, holiness, and faithfulness in every area of life and ministry — not as performance, but as devotion.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════ GATHERINGS ═══════════════════════════════ -->
+<section id="gatherings" class="py-28 md:py-36" style="background:#F0EBE1;">
+  <div class="max-w-7xl mx-auto px-8 md:px-16">
+    <div class="grid md:grid-cols-2 gap-20 items-center">
+      <div>
+        <div class="section-eyebrow mb-6 reveal">Spaces for Renewal</div>
+        <h2 class="font-display text-5xl md:text-6xl font-light mb-8 reveal reveal-delay-1" style="color:#1C2B3A; line-height:1.1;">
+          Spaces for Renewal<br/><em style="color:#A8904A; font-style:italic;">and Response</em>
+        </h2>
+        <p class="text-lg leading-relaxed mb-8 font-light reveal reveal-delay-2" style="color:#4A6080;">
+          In addition to serving leaders through mentoring and care, Sacred Calling will host gatherings and ministry environments designed to help people encounter the presence of Jesus.
+        </p>
+        <p class="text-lg leading-relaxed mb-10 font-light reveal reveal-delay-3" style="color:#4A6080;">
+          These meetings are intended to be freely offered whenever possible, supported by those who believe in the mission.
+        </p>
+        <a href="#partner" class="btn-primary reveal reveal-delay-3"><span>Support These Gatherings</span></a>
+      </div>
+
+      <!-- Staggered image grid -->
+      <div class="grid grid-cols-2 gap-4 reveal reveal-delay-2">
+        <div class="col-span-2 aspect-video overflow-hidden" style="border-radius:4px;">
+          <img src="uploads/IMG_7099.jpg" alt="Leaders praying together" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;"/>
+        </div>
+        <div class="aspect-square overflow-hidden" style="border-radius:4px;">
+          <img src="uploads/IMG_7098.jpg" alt="Baptism — a moment of renewal" style="width:100%;height:100%;object-fit:cover;object-position:center top;"/>
+        </div>
+        <div class="aspect-square overflow-hidden" style="border-radius:4px;">
+          <img src="uploads/IMG_7100.jpg" alt="Community in conversation" style="width:100%;height:100%;object-fit:cover;object-position:center;"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════ COMMUNITY / MEMBERSHIP ═══════════════════════════════ -->
+<section id="community" class="py-28 md:py-36 bg-white">
+  <div class="max-w-7xl mx-auto px-8 md:px-16">
+    <div class="grid md:grid-cols-12 gap-16 items-center">
+      <div class="md:col-span-6 reveal">
+        <div class="section-eyebrow mb-6">Growing Together</div>
+        <h2 class="font-display text-5xl md:text-6xl font-light mb-8" style="color:#1C2B3A; line-height:1.1;">
+          A Community<br/>for Christian<br/><em style="color:#A8904A; font-style:italic;">Leaders</em>
+        </h2>
+        <p class="text-lg leading-relaxed mb-6 font-light" style="color:#4A6080;">
+          Sacred Calling is developing a supportive community of leaders marked by encouragement, accountability, and shared devotion to Christ.
+        </p>
+        <p class="text-lg leading-relaxed mb-10 font-light" style="color:#4A6080;">
+          As the ministry grows, this community may include opportunities for ongoing connection, events, mentorship, and membership participation.
+        </p>
+        <!-- Membership callout -->
+        <div class="rounded-sm p-6 reveal reveal-delay-2" style="background:#FAF8F4; border:1px solid rgba(168,144,74,0.2);">
+          <div class="section-eyebrow mb-3" style="font-size:10px;">Coming Soon</div>
+          <p class="font-display italic text-xl" style="color:#1C2B3A; line-height:1.4;">
+            Monthly and annual membership pathways — building a network of leaders devoted to Christ and one another.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: feature list -->
+      <div class="md:col-span-6 reveal reveal-delay-2">
+        <div class="space-y-0">
+          <div class="flex gap-6 items-start py-8 border-b" style="border-color:rgba(232,223,208,0.8);">
+            <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center mt-1" style="background:rgba(168,144,74,0.1); border:1px solid rgba(168,144,74,0.25);">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="#A8904A" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h4 class="font-display text-xl font-medium mb-2" style="color:#1C2B3A;">Ongoing Connection</h4>
+              <p class="text-sm font-light leading-relaxed" style="color:#4A6080;">Regular touchpoints and communication designed to keep leaders connected to the mission and to one another.</p>
+            </div>
+          </div>
+          <div class="flex gap-6 items-start py-8 border-b" style="border-color:rgba(232,223,208,0.8);">
+            <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center mt-1" style="background:rgba(61,84,66,0.1); border:1px solid rgba(61,84,66,0.2);">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="7" r="3" stroke="#3D5442" stroke-width="1.5"/><path d="M3 16c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#3D5442" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h4 class="font-display text-xl font-medium mb-2" style="color:#1C2B3A;">Peer Accountability</h4>
+              <p class="text-sm font-light leading-relaxed" style="color:#4A6080;">A structured community where leaders walk together in honesty, faithfulness, and mutual encouragement.</p>
+            </div>
+          </div>
+          <div class="flex gap-6 items-start py-8 border-b" style="border-color:rgba(232,223,208,0.8);">
+            <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center mt-1" style="background:rgba(168,144,74,0.1); border:1px solid rgba(168,144,74,0.25);">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="3" y="3" width="12" height="12" rx="2" stroke="#A8904A" stroke-width="1.5"/><path d="M7 9l2 2 4-4" stroke="#A8904A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h4 class="font-display text-xl font-medium mb-2" style="color:#1C2B3A;">Events & Retreats</h4>
+              <p class="text-sm font-light leading-relaxed" style="color:#4A6080;">Member access to gatherings, retreats, and ministry environments focused on renewal and formation.</p>
+            </div>
+          </div>
+          <div class="flex gap-6 items-start py-8">
+            <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center mt-1" style="background:rgba(61,84,66,0.1); border:1px solid rgba(61,84,66,0.2);">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2l2 5h5l-4 3 1.5 5L9 12l-4.5 3L6 10 2 7h5z" stroke="#3D5442" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h4 class="font-display text-xl font-medium mb-2" style="color:#1C2B3A;">Mentorship Access</h4>
+              <p class="text-sm font-light leading-relaxed" style="color:#4A6080;">Priority access to mentoring relationships with experienced leaders and spiritual directors.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════ PARTNERSHIP ═══════════════════════════════ -->
+<section id="partner" class="partner-bg py-28 md:py-40 relative overflow-hidden">
+  <!-- Decorative elements -->
+  <div class="absolute inset-0 opacity-5">
+    <svg width="100%" height="100%" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" fill="none">
+      <circle cx="200" cy="300" r="400" stroke="white" stroke-width="1"/>
+      <circle cx="1240" cy="300" r="350" stroke="white" stroke-width="1"/>
+      <circle cx="720" cy="600" r="300" stroke="white" stroke-width="1"/>
+    </svg>
+  </div>
+  <div class="absolute top-0 left-0 right-0 h-px" style="background:linear-gradient(90deg, transparent, rgba(168,144,74,0.4), transparent);"></div>
+
+  <div class="max-w-7xl mx-auto px-8 md:px-16 relative z-10">
+    <div class="grid md:grid-cols-2 gap-20 items-center">
+      <div>
+        <div class="section-eyebrow mb-6 reveal" style="color:rgba(201,176,107,0.8);">Partnership</div>
+        <h2 class="font-display text-5xl md:text-6xl font-light mb-8 reveal reveal-delay-1" style="color:#FAF8F4; line-height:1.1;">
+          Help Strengthen<br/>Those Who <em style="color:#C9B06B; font-style:italic;">Serve</em>
+        </h2>
+        <p class="text-lg leading-relaxed mb-6 reveal reveal-delay-2" style="color:rgba(250,248,244,0.7); font-weight:300;">
+          When you support Sacred Calling, you help create spaces where Christian leaders can be renewed, encouraged, and equipped for faithful service.
+        </p>
+        <p class="text-lg leading-relaxed mb-12 reveal reveal-delay-2" style="color:rgba(250,248,244,0.7); font-weight:300;">
+          Your partnership helps make mentoring, gatherings, and ministry care possible for leaders who carry much — and often do so alone.
+        </p>
+        <a href="#connect" class="btn-gold reveal reveal-delay-3"><span>Become a Partner</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 gap-6 reveal reveal-delay-2">
+        <!-- Impact stat cards -->
+        <div class="bg-white/5 border border-white/10 rounded-sm p-8">
+          <div class="stat-num" style="color:#C9B06B;">4</div>
+          <p class="text-sm mt-2 font-light" style="color:rgba(250,248,244,0.6); letter-spacing:0.08em; text-transform:uppercase; font-size:11px;">Core Ministry Areas</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-sm p-8">
+          <div class="font-display text-6xl font-light" style="color:#7A9E80; line-height:1;">∞</div>
+          <p class="text-sm mt-2 font-light" style="color:rgba(250,248,244,0.6); letter-spacing:0.08em; text-transform:uppercase; font-size:11px;">Leaders to Reach</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-sm p-8 col-span-2">
+          <div class="font-display italic text-xl mb-2" style="color:rgba(250,248,244,0.85); line-height:1.5;">
+            "We are called to serve others with compassion, humility, and love."
+          </div>
+          <div class="section-eyebrow" style="font-size:10px; color:rgba(201,176,107,0.7);">A Mission of Mercy</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════ EMAIL CAPTURE / CTA ═══════════════════════════════ -->
+<section id="connect" class="py-28 md:py-36 bg-white">
+  <div class="max-w-4xl mx-auto px-8 md:px-16 text-center">
+    <div class="section-eyebrow mb-6 reveal">Join the Mission</div>
+    <h2 class="font-display text-5xl md:text-6xl font-light mb-8 reveal reveal-delay-1" style="color:#1C2B3A; line-height:1.1;">
+      Stay Connected<br/>to the <em style="color:#A8904A; font-style:italic;">Mission</em>
+    </h2>
+    <p class="text-lg leading-relaxed mb-14 font-light mx-auto reveal reveal-delay-2" style="color:#4A6080; max-width:520px;">
+      Sacred Calling is just beginning. Join us as we build a ministry devoted to strengthening Christian leaders and calling hearts back to the presence of Jesus.
+    </p>
+
+    <!-- Email capture form -->
+    <div class="max-w-xl mx-auto reveal reveal-delay-2">
+      <form id="interest-form" name="interest" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit(event)" class="space-y-4">
+        <input type="hidden" name="form-name" value="interest" />
+        <input type="hidden" name="subject" value="Sacred Calling form submission" />
+        <p class="hidden">
+          <label>Don't fill this out: <input name="bot-field" /></label>
+        </p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <input type="text" name="first-name" class="form-input" placeholder="First Name" required/>
+          <input type="text" name="last-name" class="form-input" placeholder="Last Name"/>
+        </div>
+        <input type="email" name="email" class="form-input" placeholder="Email Address" required/>
+        <input type="text" name="ministry-organization" class="form-input" placeholder="Ministry or Organization (optional)"/>
+        <select name="interest-area" class="form-input" style="appearance:none; background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%234A6080' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E\"); background-repeat:no-repeat; background-position:right 16px center;">
+          <option value="" disabled selected>How can Sacred Calling serve you?</option>
+          <option>Spiritual Direction</option>
+          <option>Mentorship & Formation</option>
+          <option>Biblical Counseling & Care</option>
+          <option>Gatherings & Community</option>
+          <option>General Interest / Partnership</option>
+        </select>
+        <button type="submit" class="w-full btn-primary justify-center py-4 text-sm"><span id="submit-label">Join the Interest List</span></button>
+      </form>
+
+      <div id="form-success" class="hidden py-12 text-center">
+        <div class="cross-mark mx-auto mb-6" style="width:32px;height:32px;"></div>
+        <h3 class="font-display text-3xl font-light mb-3" style="color:#1C2B3A;">Thank You</h3>
+        <p class="text-base font-light" style="color:#4A6080;">We've received your interest. We'll be in touch as Sacred Calling continues to grow.</p>
+      </div>
+
+      <p class="mt-6 text-xs font-light" style="color:rgba(74,96,128,0.5); letter-spacing:0.04em;">
+        We respect your privacy. No spam, ever.
+      </p>
+    </div>
+
+    <!-- Secondary actions -->
+    <div class="flex flex-wrap gap-4 justify-center mt-12 reveal reveal-delay-3">
+      <a href="mailto:contact@sacredcalling.org" class="btn-ghost">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer class="py-16 border-t" style="background:#1C2B3A; border-color:rgba(255,255,255,0.06);">
+  <div class="max-w-7xl mx-auto px-8 md:px-16">
+    <div class="grid md:grid-cols-3 gap-12 mb-12">
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-3 mb-5">
+          <div class="cross-mark" style="width:14px;height:14px;--gold:#C9B06B;"></div>
+          <span class="font-display text-lg font-light tracking-widest" style="color:#FAF8F4; letter-spacing:0.22em; font-size:14px;">SACRED CALLING</span>
+        </div>
+        <p class="text-sm font-light leading-relaxed" style="color:rgba(250,248,244,0.45);">
+          A Christian nonprofit devoted to strengthening Christian leaders through spiritual formation, mentorship, biblical care, and Christ-centered community.
+        </p>
+        <p class="text-xs mt-4 font-light" style="color:rgba(250,248,244,0.3); letter-spacing:0.05em;">
+          Vancouver, WA · Est. 2025
+        </p>
+      </div>
+
+      <!-- Quick links -->
+      <div>
+        <div class="section-eyebrow mb-5" style="color:rgba(201,176,107,0.7);">Ministry</div>
+        <div class="space-y-3">
+          <a href="#mission" class="block text-sm font-light hover:text-white transition-colors" style="color:rgba(250,248,244,0.45);">Our Mission</a>
+          <a href="#services" class="block text-sm font-light hover:text-white transition-colors" style="color:rgba(250,248,244,0.45);">How We Serve</a>
+          <a href="#values" class="block text-sm font-light hover:text-white transition-colors" style="color:rgba(250,248,244,0.45);">Our Commitments</a>
+          <a href="#community" class="block text-sm font-light hover:text-white transition-colors" style="color:rgba(250,248,244,0.45);">Community</a>
+          <a href="#partner" class="block text-sm font-light hover:text-white transition-colors" style="color:rgba(250,248,244,0.45);">Become a Partner</a>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <div class="section-eyebrow mb-5" style="color:rgba(201,176,107,0.7);">Connect</div>
+        <a href="mailto:contact@sacredcalling.org" class="text-sm font-light hover:text-white transition-colors block mb-3" style="color:rgba(250,248,244,0.45);">contact@sacredcalling.org</a>
+
+        <!-- Social -->
+        <div class="flex gap-4 mt-6">
+          <a href="#" class="w-9 h-9 rounded-full border flex items-center justify-center transition-all hover:border-gold-muted" style="border-color:rgba(255,255,255,0.1);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(250,248,244,0.45)" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-full border flex items-center justify-center transition-all hover:border-gold-muted" style="border-color:rgba(255,255,255,0.1);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(250,248,244,0.45)" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-full border flex items-center justify-center transition-all hover:border-gold-muted" style="border-color:rgba(255,255,255,0.1);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(250,248,244,0.45)" stroke-width="1.5"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hr-gold opacity-10 mb-8"></div>
+
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs font-light" style="color:rgba(250,248,244,0.25); letter-spacing:0.05em;">
+        © 2025 Sacred Calling · A 501(c)(3) Nonprofit Organization · All Rights Reserved
+      </p>
+      <div class="flex gap-6">
+        <a href="#" class="text-xs font-light hover:text-white transition-colors" style="color:rgba(250,248,244,0.25);">Privacy Policy</a>
+        <a href="#" class="text-xs font-light hover:text-white transition-colors" style="color:rgba(250,248,244,0.25);">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════ TWEAKS PANEL ═══════════════════════════════ -->
+<div id="tweaks-panel" class="hidden fixed bottom-6 right-6 z-50 bg-white shadow-2xl rounded-sm p-6 w-72" style="border:1px solid rgba(168,144,74,0.2);">
+  <div class="flex items-center justify-between mb-5">
+    <span class="font-display text-lg font-medium" style="color:#1C2B3A;">Tweaks</span>
+    <button onclick="hideTweaks()" class="text-xs font-light" style="color:#A8904A;">✕ Close</button>
+  </div>
+
+  <div class="space-y-5">
+    <!-- Accent Color -->
+    <div>
+      <label class="section-eyebrow mb-2 block" style="font-size:10px;">Accent Color</label>
+      <div class="flex gap-2">
+        <button onclick="setAccent('#A8904A')" class="w-8 h-8 rounded-full border-2" style="background:#A8904A; border-color:#A8904A;" title="Gold"></button>
+        <button onclick="setAccent('#3D5442')" class="w-8 h-8 rounded-full border-2" style="background:#3D5442; border-color:#3D5442;" title="Sage"></button>
+        <button onclick="setAccent('#4A6080')" class="w-8 h-8 rounded-full border-2" style="background:#4A6080; border-color:#4A6080;" title="Navy-blue"></button>
+        <button onclick="setAccent('#8B6B6B')" class="w-8 h-8 rounded-full border-2" style="background:#8B6B6B; border-color:#8B6B6B;" title="Dusty rose"></button>
+      </div>
+    </div>
+
+    <!-- Hero headline style -->
+    <div>
+      <label class="section-eyebrow mb-2 block" style="font-size:10px;">Hero Style</label>
+      <div class="flex flex-col gap-1.5">
+        <button onclick="setHeroStyle('light')" class="text-left text-xs py-2 px-3 rounded transition-colors" style="background:#FAF8F4; color:#1C2B3A; font-family:'DM Sans',sans-serif;">Light & Airy</button>
+        <button onclick="setHeroStyle('warm')" class="text-left text-xs py-2 px-3 rounded transition-colors" style="background:#FAF8F4; color:#1C2B3A; font-family:'DM Sans',sans-serif;">Warm Sand</button>
+        <button onclick="setHeroStyle('bold')" class="text-left text-xs py-2 px-3 rounded transition-colors" style="background:#FAF8F4; color:#1C2B3A; font-family:'DM Sans',sans-serif;">Bold Contrast</button>
+      </div>
+    </div>
+
+    <!-- Button style -->
+    <div>
+      <label class="section-eyebrow mb-2 block" style="font-size:10px;">Button Radius</label>
+      <input type="range" min="0" max="24" value="2" step="2" class="w-full" oninput="setRadius(this.value)"/>
+      <div class="flex justify-between text-xs mt-1" style="color:rgba(74,96,128,0.5);">
+        <span>Sharp</span><span>Rounded</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  // ── Nav scroll effect ──
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      navbar.classList.add('nav-scrolled');
+    } else {
+      navbar.classList.remove('nav-scrolled');
+    }
+  });
+
+  // ── Parallax ──
+  const heroBg = document.getElementById('hero-bg');
+  const ray1 = document.getElementById('light-ray-1');
+  const ray2 = document.getElementById('light-ray-2');
+
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (heroBg) heroBg.style.transform = `translateY(${y * 0.45}px)`;
+    if (ray1) ray1.style.transform = `translateX(-50%) translateY(${y * 0.25}px)`;
+    if (ray2) ray2.style.transform = `translateX(-50%) translateY(${y * 0.3}px)`;
+  }, { passive: true });
+
+  // ── Scroll reveal ──
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => observer.observe(el));
+
+  // ── Mobile menu ──
+  function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('open');
+  }
+
+  // ── Form submit ──
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const label = document.getElementById('submit-label');
+    label.textContent = 'Sending…';
+    try {
+      const formData = new FormData(form);
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      });
+      form.classList.add('hidden');
+      document.getElementById('form-success').classList.remove('hidden');
+    } catch (error) {
+      label.textContent = 'Try Again';
+    }
+  }
+
+  // ── Tweaks ──
+  window.addEventListener('message', (e) => {
+    if (e.data?.type === '__activate_edit_mode') showTweaks();
+    if (e.data?.type === '__deactivate_edit_mode') hideTweaks();
+  });
+  window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+
+  function showTweaks() { document.getElementById('tweaks-panel').classList.remove('hidden'); }
+  function hideTweaks() { document.getElementById('tweaks-panel').classList.add('hidden'); }
+
+  function setAccent(color) {
+    document.documentElement.style.setProperty('--gold', color);
+    document.querySelectorAll('.btn-primary::after, .service-card::before').forEach(el => el.style.background = color);
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { accentColor: color } }, '*');
+  }
+
+  function setHeroStyle(style) {
+    const bg = document.querySelector('.hero-parallax-bg');
+    if (!bg) return;
+    const styles = {
+      light: 'radial-gradient(ellipse 80% 60% at 60% 40%, rgba(168,144,74,0.08) 0%, transparent 70%), linear-gradient(160deg, #F7F3EC 0%, #EDE6D8 50%, #E8DDD0 100%)',
+      warm: 'radial-gradient(ellipse 80% 80% at 50% 50%, rgba(168,144,74,0.15) 0%, transparent 70%), linear-gradient(160deg, #F5EEE4 0%, #EBE0CE 60%, #DED3BE 100%)',
+      bold: 'linear-gradient(145deg, #1C2B3A 0%, #2C3E50 50%, #1A3028 100%)',
+    };
+    bg.style.background = styles[style] || styles.light;
+    if (style === 'bold') {
+      document.querySelector('#navbar').style.setProperty('--text', '#FAF8F4');
+    }
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { heroStyle: style } }, '*');
+  }
+
+  function setRadius(val) {
+    document.querySelectorAll('.btn-primary, .btn-ghost, .btn-gold, .service-card, .form-input').forEach(el => {
+      el.style.borderRadius = val + 'px';
+    });
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { borderRadius: parseInt(val) } }, '*');
+  }
+
+  // Cross footer color
+  document.querySelectorAll('.cross-mark').forEach(el => {
+    el.querySelectorAll('::before, ::after');
+  });
+</script>
+</body>
+</html>
