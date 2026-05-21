@@ -379,6 +379,73 @@
       overflow: hidden;
     }
 
+    /* Booking */
+    .booking-section {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.72), rgba(250,248,244,0.94)),
+        radial-gradient(ellipse 70% 60% at 82% 20%, rgba(168,144,74,0.12), transparent 62%),
+        var(--sand);
+    }
+
+    .booking-frame-wrap {
+      background: #fff;
+      border: 1px solid rgba(168,144,74,0.22);
+      border-radius: 4px;
+      box-shadow: 0 24px 70px rgba(28,43,58,0.11);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .booking-frame-header {
+      min-height: 52px;
+      border-bottom: 1px solid rgba(232,223,208,0.86);
+      background: linear-gradient(90deg, rgba(250,248,244,0.96), rgba(255,255,255,0.96));
+    }
+
+    .booking-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(168,144,74,0.58);
+    }
+
+    .booking-iframe {
+      display: block;
+      width: 100%;
+      height: 760px;
+      border: 0;
+      background: #fff;
+    }
+
+    .booking-note {
+      border-left: 2px solid var(--gold);
+      background: rgba(255,255,255,0.62);
+    }
+
+    .booking-fallback {
+      position: absolute;
+      inset: 52px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 0%, rgba(168,144,74,0.10), transparent 60%),
+        #fff;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .scheduler-loaded .booking-fallback {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    .booking-fallback-inner {
+      max-width: 430px;
+    }
+
     /* ── Stats ── */
     .stat-num {
       font-family: 'Cormorant Garamond', serif;
@@ -405,6 +472,7 @@
     @media (max-width: 768px) {
       .big-quote { font-size: 64px; }
       .stat-num { font-size: 48px; }
+      .booking-iframe { height: 680px; }
     }
   </style>
 
@@ -437,6 +505,7 @@
   <div class="hidden md:flex items-center gap-8">
     <a href="#mission" class="nav-link">Mission</a>
     <a href="#services" class="nav-link">What We Do</a>
+    <a href="#booking" class="nav-link">Book Mentorship</a>
     <a href="#values" class="nav-link">Our Commitments</a>
     <a href="#community" class="nav-link">Community</a>
     <a href="#partner" class="nav-link">Partner</a>
@@ -461,6 +530,7 @@
   </button>
   <a class="mobile-nav-link" href="#mission" onclick="toggleMenu()">Mission</a>
   <a class="mobile-nav-link" href="#services" onclick="toggleMenu()">What We Do</a>
+  <a class="mobile-nav-link" href="#booking" onclick="toggleMenu()">Book Mentorship</a>
   <a class="mobile-nav-link" href="#values" onclick="toggleMenu()">Our Commitments</a>
   <a class="mobile-nav-link" href="#community" onclick="toggleMenu()">Community</a>
   <a class="mobile-nav-link" href="#partner" onclick="toggleMenu()">Partner</a>
@@ -517,6 +587,7 @@
         <a href="#connect" class="btn-primary"><span>Stay Connected</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
+        <a href="#booking" class="btn-ghost">Book Mentorship</a>
         <a href="#partner" class="btn-ghost">Support the Mission</a>
       </div>
     </div>
@@ -658,6 +729,70 @@
         <div class="w-8 h-px mb-5" style="background:#3D5442;"></div>
         <p class="text-sm leading-relaxed font-light" style="color:#4A6080;">
           Hosting conferences, local meetings, and ministry environments that strengthen devotion, service, and fellowship among Christian leaders.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════ BOOKING ═══════════════════════════════ -->
+<section id="booking" class="booking-section py-28 md:py-36">
+  <div class="max-w-7xl mx-auto px-8 md:px-16">
+    <div class="grid md:grid-cols-12 gap-16 items-start">
+      <div class="md:col-span-4 reveal">
+        <div class="section-eyebrow mb-6">Mentorship & Spiritual Coaching</div>
+        <h2 class="font-display text-5xl md:text-6xl font-light mb-8" style="color:#1C2B3A; line-height:1.1;">
+          Spiritual Mentorship<br/>& <em style="color:#A8904A; font-style:italic;">Coaching</em>
+        </h2>
+        <p class="text-lg leading-relaxed mb-8 font-light" style="color:#4A6080;">
+          Sacred Calling provides Christ-centered spiritual mentorship and coaching for individuals, couples, and ministry teams who desire wisdom, encouragement, and intentional support in their calling.
+        </p>
+        <div class="booking-note p-6 mb-8">
+          <p class="font-display italic text-xl mb-3" style="color:#1C2B3A; line-height:1.4;">
+            Through guided conversations with Dr. Davenport, participants are invited to slow down, listen deeply, discern faithfully, and take practical next steps in life and ministry.
+          </p>
+          <p class="text-sm leading-relaxed font-light" style="color:#4A6080;">
+            These calls create space for honest reflection, biblical encouragement, spiritual formation, leadership care, and practical ministry support. Because of Sacred Calling's financial supporters, coaching calls are offered on a sliding scale so cost does not become an unnecessary barrier.
+          </p>
+        </div>
+        <a href="https://scheduler.zoom.us/asom-ordained/30-minute-appointment-with-dr-davenport" class="btn-primary" target="_blank" rel="noopener"><span>Request a Coaching Call</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5 3h8v8M13 3L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="md:col-span-8 reveal reveal-delay-2">
+        <div class="booking-frame-wrap">
+          <div class="booking-frame-header flex items-center justify-between px-6">
+            <div class="flex items-center gap-2" aria-hidden="true">
+              <span class="booking-dot"></span>
+              <span class="booking-dot" style="background:rgba(61,84,66,0.46);"></span>
+              <span class="booking-dot" style="background:rgba(74,96,128,0.34);"></span>
+            </div>
+            <div class="section-eyebrow" style="font-size:10px;">Secure Zoom Scheduler</div>
+          </div>
+          <iframe
+            class="booking-iframe"
+            src="https://scheduler.zoom.us/asom-ordained/30-minute-appointment-with-dr-davenport?embed=true"
+            title="Book a mentorship or spiritual coaching appointment with Dr. Davenport"
+            onload="this.closest('.booking-frame-wrap').classList.add('scheduler-loaded')"
+            loading="lazy"></iframe>
+          <div class="booking-fallback">
+            <div class="booking-fallback-inner">
+              <div class="cross-mark mx-auto mb-8" style="width:34px;height:34px;"></div>
+              <div class="section-eyebrow mb-5">Booking Opens in Zoom</div>
+              <h3 class="font-display text-4xl font-light mb-5" style="color:#1C2B3A; line-height:1.1;">
+                Choose a Time for Mentorship
+              </h3>
+              <p class="text-base leading-relaxed mb-8 font-light" style="color:#4A6080;">
+                The secure scheduler may open in a separate Zoom page depending on browser privacy settings.
+              </p>
+              <a href="https://scheduler.zoom.us/asom-ordained/30-minute-appointment-with-dr-davenport" class="btn-primary" target="_blank" rel="noopener"><span>Continue to Booking</span></a>
+            </div>
+          </div>
+        </div>
+        <p class="mt-6 text-xs font-light text-center" style="color:rgba(74,96,128,0.58); letter-spacing:0.04em;">
+          If the calendar does not appear, use the Request a Coaching Call button to schedule directly through Zoom.
         </p>
       </div>
     </div>
