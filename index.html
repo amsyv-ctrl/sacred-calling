@@ -44,6 +44,7 @@
     .px-3{padding-left:0.75rem;padding-right:0.75rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}
     .py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.py-8{padding-top:2rem;padding-bottom:2rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-28{padding-top:7rem;padding-bottom:7rem}.py-32{padding-top:8rem;padding-bottom:8rem}
     .text-xs{font-size:0.75rem;line-height:1rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-5xl{font-size:3rem;line-height:1}.text-6xl{font-size:3.75rem;line-height:1}
+    .text-4xl{font-size:2.25rem;line-height:2.5rem}
     .font-light{font-weight:300}.font-medium{font-weight:500}.font-body{font-family:'DM Sans',sans-serif}.font-display{font-family:'Cormorant Garamond',serif}
     .italic{font-style:italic}
     .leading-none{line-height:1}.leading-relaxed{line-height:1.625}
@@ -78,7 +79,9 @@
       .md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
       .md\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}
       .md\:col-span-4{grid-column:span 4/span 4}
+      .md\:col-span-5{grid-column:span 5/span 5}
       .md\:col-span-6{grid-column:span 6/span 6}
+      .md\:col-span-7{grid-column:span 7/span 7}
       .md\:col-span-8{grid-column:span 8/span 8}
       .md\:px-16{padding-left:4rem;padding-right:4rem}
       .md\:py-36{padding-top:9rem;padding-bottom:9rem}
@@ -312,6 +315,82 @@
     .form-input:focus { border-color: var(--gold); }
     .form-input::placeholder { color: rgba(28,43,58,0.35); }
 
+    textarea.form-input {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-input option {
+      color: var(--navy);
+    }
+
+    .notice-toast {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 100%;
+      padding: 24px;
+      background: rgba(28,43,58,0.48);
+      color: var(--navy);
+      z-index: 300;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .notice-toast-panel {
+      width: min(560px, 100%);
+      background: #fff;
+      border: 1px solid rgba(168,144,74,0.32);
+      border-top: 3px solid var(--gold);
+      box-shadow: 0 30px 80px rgba(28,43,58,0.26);
+      padding: 32px;
+      border-radius: 4px;
+      transform: translateY(18px) scale(0.98);
+      transition: transform 0.25s ease;
+    }
+
+    .notice-toast.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .notice-toast.visible .notice-toast-panel {
+      transform: translateY(0) scale(1);
+    }
+
+    .notice-toast a {
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .notice-toast a:hover {
+      text-decoration: underline;
+    }
+
+    .notice-close {
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(28,43,58,0.12);
+      background: #fff;
+      color: var(--navy);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .notice-close:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
     /* ── Cross motif ── */
     .cross-mark {
       display: inline-block;
@@ -507,6 +586,7 @@
     <a href="#mission" class="nav-link">Mission</a>
     <a href="#services" class="nav-link">What We Do</a>
     <a href="#booking" class="nav-link">Book Mentorship</a>
+    <a href="#speaking" class="nav-link">Speaking</a>
     <a href="#values" class="nav-link">Our Commitments</a>
     <a href="#community" class="nav-link">Community</a>
     <a href="#partner" class="nav-link">Partner</a>
@@ -532,6 +612,7 @@
   <a class="mobile-nav-link" href="#mission" onclick="toggleMenu()">Mission</a>
   <a class="mobile-nav-link" href="#services" onclick="toggleMenu()">What We Do</a>
   <a class="mobile-nav-link" href="#booking" onclick="toggleMenu()">Book Mentorship</a>
+  <a class="mobile-nav-link" href="#speaking" onclick="toggleMenu()">Speaking</a>
   <a class="mobile-nav-link" href="#values" onclick="toggleMenu()">Our Commitments</a>
   <a class="mobile-nav-link" href="#community" onclick="toggleMenu()">Community</a>
   <a class="mobile-nav-link" href="#partner" onclick="toggleMenu()">Partner</a>
@@ -589,7 +670,7 @@
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <a href="#booking" class="btn-ghost">Book Mentorship</a>
-        <a href="#partner" class="btn-ghost">Support the Mission</a>
+        <a href="#connect" class="btn-ghost financial-support-trigger">Support the Mission</a>
       </div>
     </div>
 
@@ -747,14 +828,14 @@
           Spiritual Mentorship<br/>& <em style="color:#A8904A; font-style:italic;">Coaching</em>
         </h2>
         <p class="text-lg leading-relaxed mb-8 font-light" style="color:#4A6080;">
-          Sacred Calling provides Christ-centered spiritual mentorship and coaching for individuals, couples, and ministry teams who desire wisdom, encouragement, and intentional support in their calling.
+          Sacred Calling provides Christ-centered spiritual mentorship and coaching for leaders, couples, and ministry teams who desire wisdom, encouragement, and intentional support in their calling.
         </p>
         <div class="booking-note p-6 mb-8">
           <p class="font-display italic text-xl mb-3" style="color:#1C2B3A; line-height:1.4;">
             Through guided conversations with Dr. Davenport, participants are invited to slow down, listen deeply, discern faithfully, and take practical next steps in life and ministry.
           </p>
           <p class="text-sm leading-relaxed font-light" style="color:#4A6080;">
-            These calls create space for honest reflection, biblical encouragement, spiritual formation, leadership care, and practical ministry support. Because of Sacred Calling's financial supporters, coaching calls are offered on a sliding scale so cost does not become an unnecessary barrier.
+            These calls create space for honest reflection, biblical encouragement, spiritual formation, leadership care, and practical ministry support.
           </p>
         </div>
         <a href="https://scheduler.zoom.us/asom-ordained/30-minute-appointment-with-dr-davenport" class="btn-primary" target="_blank" rel="noopener"><span>Request a Coaching Call</span>
@@ -867,9 +948,9 @@
           In addition to serving leaders through mentoring and care, Sacred Calling will host gatherings and ministry environments designed to help people encounter the presence of Jesus.
         </p>
         <p class="text-lg leading-relaxed mb-10 font-light reveal reveal-delay-3" style="color:#4A6080;">
-          These meetings are intended to be freely offered whenever possible, supported by those who believe in the mission.
+          Upcoming Sacred Calling gatherings and events will be announced soon. Join the contact list to receive updates as new opportunities become available.
         </p>
-        <a href="#partner" class="btn-primary reveal reveal-delay-3"><span>Support These Gatherings</span></a>
+        <a href="#connect" class="btn-primary reveal reveal-delay-3"><span>Join the Contact List</span></a>
       </div>
 
       <!-- Staggered image grid -->
@@ -882,6 +963,86 @@
         </div>
         <div class="aspect-square overflow-hidden" style="border-radius:4px;">
           <img src="uploads/IMG_7100.jpg" alt="Community in conversation" style="width:100%;height:100%;object-fit:cover;object-position:center;"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════ SPEAKING MINISTRY ═══════════════════════════════ -->
+<section id="speaking" class="py-28 md:py-36 bg-white">
+  <div class="max-w-7xl mx-auto px-8 md:px-16">
+    <div class="grid md:grid-cols-12 gap-16 items-start">
+      <div class="md:col-span-5 reveal">
+        <div class="section-eyebrow mb-6">Speaking Ministry</div>
+        <h2 class="font-display text-5xl md:text-6xl font-light mb-8" style="color:#1C2B3A; line-height:1.1;">
+          Invite Bryan<br/>& <em style="color:#A8904A; font-style:italic;">Laura</em>
+        </h2>
+        <p class="text-lg leading-relaxed mb-6 font-light" style="color:#4A6080;">
+          Bryan and Laura are available for ministry engagements, conferences, retreats, leadership gatherings, and church events centered on spiritual formation, encouragement, and faithful service.
+        </p>
+        <p class="text-lg leading-relaxed mb-8 font-light" style="color:#4A6080;">
+          Through the generosity of Sacred Calling's financial partners, Bryan and Laura are able to serve leaders, churches, and ministry communities around the country without placing unnecessary financial burden on the churches they serve.
+        </p>
+        <p class="text-sm leading-relaxed mb-8 font-light" style="color:#4A6080;">
+          Sacred Calling is incorporated as a nonprofit organization, and federal tax-exempt status is currently pending.
+        </p>
+        <div class="rounded-sm p-6" style="background:#FAF8F4; border:1px solid rgba(168,144,74,0.2);">
+          <div class="section-eyebrow mb-3" style="font-size:10px;">Start the Conversation</div>
+          <p class="font-display italic text-xl" style="color:#1C2B3A; line-height:1.4;">
+            Tell us about the event, the people you serve, and how Bryan and/or Laura can best come alongside your community.
+          </p>
+        </div>
+      </div>
+
+      <div class="md:col-span-7 reveal reveal-delay-2">
+        <form id="speaking-form" name="interest" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit(event)" class="space-y-4">
+          <input type="hidden" name="form-name" value="interest" />
+          <input type="hidden" name="request-type" value="Speaking Ministry Request" />
+          <input type="hidden" name="subject" value="Sacred Calling speaking ministry request" />
+          <p class="hidden">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+          <div class="grid md:grid-cols-2 gap-4">
+            <input type="text" name="name" class="form-input" placeholder="Name" required/>
+            <input type="email" name="email" class="form-input" placeholder="Email" required/>
+          </div>
+          <div class="grid md:grid-cols-2 gap-4">
+            <input type="tel" name="phone" class="form-input" placeholder="Phone"/>
+            <input type="text" name="church-organization" class="form-input" placeholder="Church / Organization" required/>
+          </div>
+          <div class="grid md:grid-cols-2 gap-4">
+            <input type="text" name="event-name" class="form-input" placeholder="Event Name"/>
+            <input type="text" name="event-location" class="form-input" placeholder="Event Location"/>
+          </div>
+          <div class="grid md:grid-cols-2 gap-4">
+            <input type="text" name="event-date-range" class="form-input" placeholder="Event Date or Date Range"/>
+            <select name="event-type" class="form-input" style="appearance:none; background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%234A6080' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E&quot;); background-repeat:no-repeat; background-position:right 16px center;">
+              <option value="" disabled selected>Type of Event</option>
+              <option>Conference</option>
+              <option>Retreat</option>
+              <option>Leadership Gathering</option>
+              <option>Church Service</option>
+              <option>Workshop / Training</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="grid md:grid-cols-2 gap-4">
+            <input type="text" name="expected-audience-size" class="form-input" placeholder="Expected Audience Size"/>
+            <input type="text" name="audience-description" class="form-input" placeholder="Audience Description"/>
+          </div>
+          <textarea name="event-goals" class="form-input" placeholder="Event Goals"></textarea>
+          <textarea name="desired-topic-focus" class="form-input" placeholder="Desired Topic or Focus"></textarea>
+          <textarea name="how-to-serve" class="form-input" placeholder="How can Bryan and/or Laura best serve this event?"></textarea>
+          <textarea name="additional-notes" class="form-input" placeholder="Additional Notes"></textarea>
+          <button type="submit" class="w-full btn-primary justify-center py-4 text-sm"><span>Submit Speaking Request</span></button>
+        </form>
+
+        <div id="speaking-form-success" class="hidden py-12 text-center">
+          <div class="cross-mark mx-auto mb-6" style="width:32px;height:32px;"></div>
+          <h3 class="font-display text-3xl font-light mb-3" style="color:#1C2B3A;">Request Received</h3>
+          <p class="text-base font-light" style="color:#4A6080;">Thank you for reaching out. We'll review the details and follow up as Sacred Calling discerns how to serve your event.</p>
         </div>
       </div>
     </div>
@@ -908,7 +1069,7 @@
         <div class="rounded-sm p-6 reveal reveal-delay-2" style="background:#FAF8F4; border:1px solid rgba(168,144,74,0.2);">
           <div class="section-eyebrow mb-3" style="font-size:10px;">Coming Soon</div>
           <p class="font-display italic text-xl" style="color:#1C2B3A; line-height:1.4;">
-            Monthly and annual membership pathways — building a network of leaders devoted to Christ and one another.
+            Contact-list and future partner pathways — building a network of leaders devoted to Christ and one another.
           </p>
         </div>
       </div>
@@ -940,7 +1101,7 @@
             </div>
             <div>
               <h4 class="font-display text-xl font-medium mb-2" style="color:#1C2B3A;">Events & Retreats</h4>
-              <p class="text-sm font-light leading-relaxed" style="color:#4A6080;">Member access to gatherings, retreats, and ministry environments focused on renewal and formation.</p>
+              <p class="text-sm font-light leading-relaxed" style="color:#4A6080;">First access to gatherings, retreats, and ministry environments focused on renewal and formation.</p>
             </div>
           </div>
           <div class="flex gap-6 items-start py-8">
@@ -949,7 +1110,7 @@
             </div>
             <div>
               <h4 class="font-display text-xl font-medium mb-2" style="color:#1C2B3A;">Mentorship Access</h4>
-              <p class="text-sm font-light leading-relaxed" style="color:#4A6080;">Priority access to mentoring relationships with experienced leaders and spiritual directors.</p>
+              <p class="text-sm font-light leading-relaxed" style="color:#4A6080;">Future access to mentoring relationships with experienced leaders and spiritual directors.</p>
             </div>
           </div>
         </div>
@@ -974,20 +1135,20 @@
   <div class="max-w-7xl mx-auto px-8 md:px-16 relative z-10">
     <div class="grid md:grid-cols-2 gap-20 items-center">
       <div>
-        <div class="section-eyebrow mb-6 reveal" style="color:rgba(201,176,107,0.8);">Partnership</div>
+        <div class="section-eyebrow mb-6 reveal" style="color:rgba(201,176,107,0.8);">Financial Partnership</div>
         <h2 class="font-display text-5xl md:text-6xl font-light mb-8 reveal reveal-delay-1" style="color:#FAF8F4; line-height:1.1;">
           Help Strengthen<br/>Those Who <em style="color:#C9B06B; font-style:italic;">Serve</em>
         </h2>
         <p class="text-lg leading-relaxed mb-6 reveal reveal-delay-2" style="color:rgba(250,248,244,0.7); font-weight:300;">
-          When you support Sacred Calling, you help create spaces where Christian leaders can be renewed, encouraged, and equipped for faithful service.
+          Financial partners help make Sacred Calling accessible to leaders, couples, ministry teams, and churches who need spiritual care, mentorship, coaching, and encouragement.
         </p>
         <p class="text-lg leading-relaxed mb-6 reveal reveal-delay-2" style="color:rgba(250,248,244,0.7); font-weight:300;">
-          Your partnership helps make mentoring, gatherings, and ministry care possible for leaders who carry much — and often do so alone.
+          As our nonprofit setup is finalized, join the contact list to receive updates, stories, resources, and opportunities to support the mission.
         </p>
         <p class="text-sm leading-relaxed mb-12 reveal reveal-delay-2" style="color:rgba(250,248,244,0.5); font-weight:300;">
-          Sacred Calling is currently in the process of obtaining 501(c)(3) status. Donations may not yet be tax deductible. Please contact us with questions about giving or nonprofit status.
+          Sacred Calling is incorporated as a nonprofit organization, and federal tax-exempt status is currently pending. Financial support options are not live yet.
         </p>
-        <a href="#connect" class="btn-gold reveal reveal-delay-3"><span>Become a Partner</span>
+        <a href="#connect" class="btn-gold reveal reveal-delay-3 financial-support-trigger"><span>Become a Partner</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -1021,8 +1182,8 @@
     <h2 class="font-display text-5xl md:text-6xl font-light mb-8 reveal reveal-delay-1" style="color:#1C2B3A; line-height:1.1;">
       Stay Connected<br/>to the <em style="color:#A8904A; font-style:italic;">Mission</em>
     </h2>
-    <p class="text-lg leading-relaxed mb-14 font-light mx-auto reveal reveal-delay-2" style="color:#4A6080; max-width:520px;">
-      Sacred Calling is just beginning. Join us as we build a ministry devoted to strengthening Christian leaders and calling hearts back to the presence of Jesus.
+    <p class="text-lg leading-relaxed mb-14 font-light mx-auto reveal reveal-delay-2" style="color:#4A6080; max-width:620px;">
+      Join the Sacred Calling contact list to receive encouragement, spiritual formation resources, ministry updates, and first access to future coaching, gatherings, and support opportunities.
     </p>
 
     <!-- Email capture form -->
@@ -1047,13 +1208,13 @@
           <option>Gatherings & Community</option>
           <option>General Interest / Partnership</option>
         </select>
-        <button type="submit" class="w-full btn-primary justify-center py-4 text-sm"><span id="submit-label">Join the Interest List</span></button>
+        <button type="submit" class="w-full btn-primary justify-center py-4 text-sm"><span>Join the Contact List</span></button>
       </form>
 
       <div id="form-success" class="hidden py-12 text-center">
         <div class="cross-mark mx-auto mb-6" style="width:32px;height:32px;"></div>
         <h3 class="font-display text-3xl font-light mb-3" style="color:#1C2B3A;">Thank You</h3>
-        <p class="text-base font-light" style="color:#4A6080;">We've received your interest. We'll be in touch as Sacred Calling continues to grow.</p>
+        <p class="text-base font-light" style="color:#4A6080;">We've received your interest. We'll share encouragement, resources, and ministry updates as Sacred Calling continues to grow.</p>
       </div>
 
       <p class="mt-6 text-xs font-light" style="color:rgba(74,96,128,0.5); letter-spacing:0.04em;">
@@ -1095,7 +1256,8 @@
           <a href="#services" class="block text-sm font-light hover:text-white transition-colors" style="color:rgba(250,248,244,0.45);">How We Serve</a>
           <a href="#values" class="block text-sm font-light hover:text-white transition-colors" style="color:rgba(250,248,244,0.45);">Our Commitments</a>
           <a href="#community" class="block text-sm font-light hover:text-white transition-colors" style="color:rgba(250,248,244,0.45);">Community</a>
-          <a href="#partner" class="block text-sm font-light hover:text-white transition-colors" style="color:rgba(250,248,244,0.45);">Become a Partner</a>
+          <a href="#speaking" class="block text-sm font-light hover:text-white transition-colors" style="color:rgba(250,248,244,0.45);">Speaking Requests</a>
+          <a href="#connect" class="block text-sm font-light hover:text-white transition-colors financial-support-trigger" style="color:rgba(250,248,244,0.45);">Financial Support</a>
         </div>
       </div>
 
@@ -1104,7 +1266,7 @@
         <div class="section-eyebrow mb-5" style="color:rgba(201,176,107,0.7);">Connect</div>
         <a href="mailto:contact@sacredcalling.org" class="text-sm font-light hover:text-white transition-colors block mb-3" style="color:rgba(250,248,244,0.45);">contact@sacredcalling.org</a>
         <p class="text-xs font-light leading-relaxed" style="color:rgba(250,248,244,0.35);">
-          Nonprofit status pending IRS approval. Gifts may not yet be tax deductible; contact us with questions.
+          Sacred Calling is incorporated as a nonprofit organization, and federal tax-exempt status is currently pending.
         </p>
 
         <!-- Social -->
@@ -1135,6 +1297,27 @@
     </div>
   </div>
 </footer>
+
+<div id="financial-notice" class="notice-toast" role="dialog" aria-modal="true" aria-labelledby="financial-notice-title">
+  <div class="notice-toast-panel">
+    <div class="flex items-start justify-between gap-6 mb-5">
+      <div>
+        <div class="section-eyebrow mb-3" style="font-size:10px;">Financial Support</div>
+        <h3 id="financial-notice-title" class="font-display text-3xl font-light" style="color:#1C2B3A; line-height:1.1;">Support Options Coming Soon</h3>
+      </div>
+      <button type="button" class="notice-close" onclick="hideFinancialNotice()" aria-label="Close financial support notice">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <p class="text-base leading-relaxed font-light mb-6" style="color:#4A6080;">
+      Sacred Calling's nonprofit setup is still being finalized. Join the contact list for live updates on when financial support options become available.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href="#connect" class="btn-primary" onclick="hideFinancialNotice()"><span>Join the Contact List</span></a>
+      <button type="button" class="btn-ghost" onclick="hideFinancialNotice()">Close</button>
+    </div>
+  </div>
+</div>
 
 
 <!-- ═══════════════════════════════ TWEAKS PANEL ═══════════════════════════════ -->
@@ -1222,8 +1405,9 @@
   async function handleSubmit(e) {
     e.preventDefault();
     const form = e.target;
-    const label = document.getElementById('submit-label');
-    label.textContent = 'Sending…';
+    const label = form.querySelector('button[type="submit"] span');
+    const originalLabel = label ? label.textContent : '';
+    if (label) label.textContent = 'Sending...';
     try {
       const formData = new FormData(form);
       await fetch('/', {
@@ -1232,11 +1416,48 @@
         body: new URLSearchParams(formData).toString(),
       });
       form.classList.add('hidden');
-      document.getElementById('form-success').classList.remove('hidden');
+      const success = form.id === 'speaking-form'
+        ? document.getElementById('speaking-form-success')
+        : document.getElementById('form-success');
+      if (success) success.classList.remove('hidden');
     } catch (error) {
-      label.textContent = 'Try Again';
+      if (label) label.textContent = 'Try Again';
+      setTimeout(() => {
+        if (label) label.textContent = originalLabel;
+      }, 2400);
     }
   }
+
+  // ── Financial support notice ──
+  const financialNotice = document.getElementById('financial-notice');
+  let financialNoticeTimer;
+  function showFinancialNotice() {
+    if (!financialNotice) return;
+    financialNotice.classList.add('visible');
+    clearTimeout(financialNoticeTimer);
+  }
+
+  function hideFinancialNotice() {
+    if (!financialNotice) return;
+    financialNotice.classList.remove('visible');
+    clearTimeout(financialNoticeTimer);
+  }
+
+  document.querySelectorAll('.financial-support-trigger').forEach(link => {
+    link.addEventListener('click', () => {
+      showFinancialNotice();
+    });
+  });
+
+  if (financialNotice) {
+    financialNotice.addEventListener('click', (event) => {
+      if (event.target === financialNotice) hideFinancialNotice();
+    });
+  }
+
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') hideFinancialNotice();
+  });
 
   // ── Tweaks ──
   window.addEventListener('message', (e) => {
