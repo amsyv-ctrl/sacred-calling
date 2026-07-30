@@ -47,6 +47,7 @@ Core ministry language from Dav: Sacred Calling provides encouragement, connecti
 - Earlier placeholder Zoom scheduler belonged to Yisrael and should not be restored.
 - Per Dav (2026-07-29): the offering is named "Personal Encouragement Session"; the booking section's large heading reads "Spiritual Direction & Coaching" (not "mentorship"). Dav's framing: he is offering to meet with, listen to, encourage, and pray with people.
 - Site CTAs for this offering now read "Book a Session" (nav, mobile nav, hero).
+- Per Dav (2026-07-30): all remaining "mentorship/mentoring" language sitewide was replaced with "coaching" (meta descriptions, hero, What We Do card, gatherings copy, community/partner sections, contact-form interest option "Coaching & Formation", footer). Do not reintroduce "mentorship" in site copy.
 
 ## Giving / Nonprofit Language
 
