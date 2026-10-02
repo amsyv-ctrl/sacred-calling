@@ -32,7 +32,7 @@ Core ministry language from Dav: Sacred Calling provides encouragement, connecti
 - Hero: Sacred Calling ministry overview and main CTAs.
 - Mission / Purpose: "Follow Me. Feed Them." and ministry purpose.
 - What We Do: spiritual direction, mentorship and formation, biblical counseling, gatherings and community.
-- Booking: Zoom Scheduler embed for Dr. Davenport mentorship/spiritual coaching.
+- Booking: Zoom Scheduler embed for spiritual direction with Dr. Davenport.
 - Events: currently "check back soon" language only. Do not invent placeholder events.
 - Speaking: Bryan and Laura speaking ministry section with detailed request form.
 - Partner / Giving: Zeffy giving is live through modal-enabled links with a normal link fallback.
@@ -45,8 +45,9 @@ Core ministry language from Dav: Sacred Calling provides encouragement, connecti
 - Current embed URL:
   `https://scheduler.zoom.us/bryan-davenport/30-mins-with-bryan?embed=true`
 - Earlier placeholder Zoom scheduler belonged to Yisrael and should not be restored.
-- Per Dav (2026-07-29): the offering is named "Personal Encouragement Session"; the booking section's large heading reads "Spiritual Direction & Coaching" (not "mentorship"). Dav's framing: he is offering to meet with, listen to, encourage, and pray with people.
-- Site CTAs for this offering now read "Book a Session" (nav, mobile nav, hero).
+- Earlier (2026-07-29), the one-on-one offering was named "Personal Encouragement Session," and the booking heading read "Spiritual Direction & Coaching." Dav's framing then: he meets with people to listen, encourage, and pray.
+- Per Dav (2026-10-02): that one-on-one offering is named "Spiritual Direction." The booking heading reads "Spiritual Direction." The eyebrow now reads "Book a Session," matching the existing CTAs, so the name is not repeated above the heading. Do not describe it as an encouragement session, and do not reintroduce the word "mentorship" in site copy.
+- Site CTAs for this offering still read "Book a Session" (nav, mobile nav, hero, and the booking button).
 - Per Dav (2026-07-30): all remaining "mentorship/mentoring" language sitewide was replaced with "coaching" (meta descriptions, hero, What We Do card, gatherings copy, community/partner sections, contact-form interest option "Coaching & Formation", footer). Do not reintroduce "mentorship" in site copy.
 
 ## Giving / Nonprofit Language
@@ -118,7 +119,7 @@ Do not assume local `index.html` changes are deployed until they are committed/p
 
 - Review Zeffy's giving records, recurring-partner flow, receipts, and reporting.
 - Decide whether partners receive any access benefit, or whether everyone on the contact list receives the same regular content.
-- Decide pricing and payment flow for individual mentorship/spiritual coaching appointments.
+- Decide pricing and payment flow for spiritual direction appointments.
 - Review speaking request form fields and recipient routing periodically.
 - Confirm who owns ongoing MailerLite content creation and sending.
 - Confirm event strategy before adding events beyond "announced soon."
