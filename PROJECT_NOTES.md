@@ -29,7 +29,8 @@ Core ministry language from Dav: Sacred Calling provides encouragement, connecti
 
 ## Key Site Sections
 
-- Hero: Sacred Calling ministry overview and main CTAs.
+- Hero: Sacred Calling ministry overview and main CTAs. The portrait is `uploads/dav-davenport-main.jpg`.
+- Welcome: between the hero and the mission, a "Welcome from Dav" section links to https://youtube.com/shorts/YZs51Z-6RjA.
 - Mission / Purpose: "Follow Me. Feed Them." and ministry purpose.
 - What We Do: spiritual direction, mentorship and formation, biblical counseling, gatherings and community.
 - Booking: Zoom Scheduler embed for spiritual direction with Dr. Davenport.
