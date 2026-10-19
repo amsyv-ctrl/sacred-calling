@@ -6,7 +6,7 @@ Read this first when starting a new Sacred Calling thread.
 
 Sacred Calling is a Christ-centered nonprofit initiative for Christian leaders. The site should feel warm, pastoral, clear, practical, and brand-consistent. Avoid overpromising. Use "Dr. Davenport" where appropriate, and use "Bryan and Laura" when referring to their shared ministry.
 
-Core ministry language from Dav: Sacred Calling provides encouragement, connection, and accountability for Christian leaders through spiritual care, mentorship, coaching, speaking/travel ministry, gatherings, and future events.
+Core ministry language from Dav: Sacred Calling provides encouragement, connection, and accountability for Christian leaders through spiritual care, Spiritual Direction, coaching, speaking/travel ministry, gatherings, and future events.
 
 ## Current Website
 
@@ -32,8 +32,8 @@ Core ministry language from Dav: Sacred Calling provides encouragement, connecti
 - Hero: Sacred Calling ministry overview and main CTAs. The portrait is `uploads/dav-davenport-main.jpg`.
 - Welcome: between the hero and the mission, a "Welcome from Dav" section links to https://youtube.com/shorts/YZs51Z-6RjA.
 - Mission / Purpose: "Follow Me. Feed Them." and ministry purpose.
-- What We Do: spiritual direction, mentorship and formation, biblical counseling, gatherings and community.
-- Booking: Zoom Scheduler embed for spiritual direction with Dr. Davenport.
+- What We Do: Spiritual Direction, Coaching & Formation, Biblical Counseling, Gatherings & Community.
+- Booking: Zoom Scheduler embed for Spiritual Direction sessions with Dr. Davenport.
 - Events: currently "check back soon" language only. Do not invent placeholder events.
 - Speaking: Bryan and Laura speaking ministry section with detailed request form.
 - Partner / Giving: Zeffy giving is live through modal-enabled links with a normal link fallback.
@@ -120,7 +120,7 @@ Do not assume local `index.html` changes are deployed until they are committed/p
 
 - Review Zeffy's giving records, recurring-partner flow, receipts, and reporting.
 - Decide whether partners receive any access benefit, or whether everyone on the contact list receives the same regular content.
-- Decide pricing and payment flow for spiritual direction appointments.
+- Decide pricing and payment flow for Spiritual Direction sessions.
 - Review speaking request form fields and recipient routing periodically.
 - Confirm who owns ongoing MailerLite content creation and sending.
 - Confirm event strategy before adding events beyond "announced soon."
@@ -197,7 +197,7 @@ These are working notes to unpack into a communications plan, website updates, a
 - Keep Sacred Calling subscribers distinct from partner/donor records, while allowing appropriate tags or groups for:
   - General Sacred Calling contact list.
   - Financial partners.
-  - Mentorship/coaching interest.
+  - Spiritual Direction & Coaching interest.
   - Speaking and event interest.
   - School of Faith interest.
 - The current direction remains that regular encouragement should be available to everyone who opts in; financial partnership does not need to create a separate content tier.
