@@ -138,6 +138,24 @@
       will-change: transform;
     }
 
+    /* Portrait welcome video: centered, never a full-bleed tall column */
+    .welcome-video-frame {
+      width: min(100%, 22.5rem, calc(68vh * 9 / 16));
+      margin: 0 auto;
+      aspect-ratio: 9 / 16;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #1C2B3A;
+      box-shadow: 0 25px 50px -12px rgba(28, 43, 58, 0.28);
+    }
+    .welcome-video-frame video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #1C2B3A;
+    }
+
     /* ── Scroll Reveal ── */
     .reveal {
       opacity: 0;
@@ -647,27 +665,19 @@
       Welcome to <em style="color:#A8904A; font-style:italic;">Sacred Calling</em>
     </h2>
 
-    <a
-      href="https://youtube.com/shorts/YZs51Z-6RjA?feature=shared"
-      target="_blank"
-      rel="noopener"
-      class="block relative overflow-hidden shadow-2xl mx-auto reveal reveal-delay-2"
-      style="max-width:720px; aspect-ratio:16/9; border-radius:4px; background:#1C2B3A;"
-      aria-label="Watch Dav introduce the mission and ministry of Sacred Calling on YouTube"
-    >
-      <img
-        src="https://i.ytimg.com/vi/YZs51Z-6RjA/maxresdefault.jpg"
-        alt="Dav introducing the mission and ministry of Sacred Calling"
-        style="width:100%; height:100%; object-fit:cover;"
-      />
-      <span class="absolute inset-0 flex items-center justify-center" style="background:rgba(28,43,58,0.12);">
-        <span class="inline-flex items-center justify-center rounded-full" style="width:72px; height:72px; background:#A8904A; box-shadow:0 12px 30px rgba(28,43,58,0.28);" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" style="margin-left:4px;">
-            <path d="M22 14L9 22V6L22 14Z" fill="#FFFFFF"/>
-          </svg>
-        </span>
-      </span>
-    </a>
+    <div class="welcome-video-frame reveal reveal-delay-2">
+      <video
+        poster="uploads/sacred-calling-intro-poster.jpg"
+        controls
+        playsinline
+        preload="metadata"
+        width="720"
+        height="1280"
+        aria-label="Dav introduces Sacred Calling"
+      >
+        <source src="uploads/sacred-calling-intro-46s.mp4" type="video/mp4" />
+      </video>
+    </div>
 
     <p class="text-lg md:text-xl leading-relaxed mt-8 mx-auto reveal reveal-delay-3" style="color:#4A6080; max-width:680px; font-weight:300;">
       We’d like to introduce you to the mission and ministry of Sacred Calling.
