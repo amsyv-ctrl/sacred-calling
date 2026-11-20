@@ -184,6 +184,21 @@
       display: none;
     }
 
+    /* Welcome and Mission are one white field. Full padding on both left a
+       tall empty band under the portrait; keep the welcome top and the
+       mission bottom, and tighten only the join. */
+    #welcome {
+      padding-bottom: 1rem;
+    }
+    #mission {
+      padding-top: 3.5rem;
+    }
+    @media (min-width: 768px) {
+      #mission {
+        padding-top: 4.5rem;
+      }
+    }
+
     /* ── Scroll Reveal ── */
     .reveal {
       opacity: 0;
