@@ -140,6 +140,7 @@
 
     /* Portrait welcome video: centered, never a full-bleed tall column */
     .welcome-video-frame {
+      position: relative;
       width: min(100%, 22.5rem, calc(68vh * 9 / 16));
       margin: 0 auto;
       aspect-ratio: 9 / 16;
@@ -148,12 +149,39 @@
       background: #1C2B3A;
       box-shadow: 0 25px 50px -12px rgba(28, 43, 58, 0.28);
     }
-    .welcome-video-frame video {
+    .welcome-video-frame video,
+    .welcome-video-poster {
+      position: absolute;
+      inset: 0;
       display: block;
       width: 100%;
       height: 100%;
-      object-fit: contain;
       background: #1C2B3A;
+    }
+    .welcome-video-frame video {
+      object-fit: contain;
+    }
+    .welcome-video-frame video[hidden] {
+      display: none;
+    }
+    .welcome-video-poster {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      cursor: pointer;
+    }
+    .welcome-video-poster img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .welcome-video-poster:focus-visible {
+      outline: none;
+      box-shadow: inset 0 0 0 2px #A8904A;
+    }
+    .welcome-video-frame.is-playing .welcome-video-poster {
+      display: none;
     }
 
     /* ── Scroll Reveal ── */
@@ -666,13 +694,15 @@
     </h2>
 
     <div class="welcome-video-frame reveal reveal-delay-2">
+      <button type="button" class="welcome-video-poster" aria-label="Play the 46-second welcome from Dr. Bryan Davenport">
+        <img src="uploads/sacred-calling-intro-poster-v2.jpg" alt="" width="720" height="1280" />
+      </button>
       <video
-        poster="uploads/sacred-calling-intro-poster.jpg"
-        controls
         playsinline
-        preload="metadata"
+        preload="none"
         width="720"
         height="1280"
+        hidden
         aria-label="Dav introduces Sacred Calling"
       >
         <source src="uploads/sacred-calling-intro-46s.mp4" type="video/mp4" />
@@ -1360,6 +1390,22 @@
     if (ray1) ray1.style.transform = `translateX(-50%) translateY(${y * 0.25}px)`;
     if (ray2) ray2.style.transform = `translateX(-50%) translateY(${y * 0.3}px)`;
   }, { passive: true });
+
+  // ── Welcome video: branded still starts playback, with no second play icon ──
+  (function () {
+    const frame = document.querySelector('.welcome-video-frame');
+    const poster = frame && frame.querySelector('.welcome-video-poster');
+    const video = frame && frame.querySelector('video');
+    if (!poster || !video) return;
+    poster.addEventListener('click', () => {
+      poster.hidden = true;
+      video.hidden = false;
+      video.controls = true;
+      frame.classList.add('is-playing');
+      const play = video.play();
+      if (play && typeof play.catch === 'function') play.catch(() => {});
+    });
+  })();
 
   // ── Scroll reveal ──
   const reveals = document.querySelectorAll('.reveal');

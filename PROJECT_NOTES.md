@@ -30,7 +30,7 @@ Core ministry language from Dav: Sacred Calling provides encouragement, connecti
 ## Key Site Sections
 
 - Hero: Sacred Calling ministry overview and main CTAs. The portrait is `uploads/dav-davenport-main.jpg`.
-- Welcome: between the hero and the mission, a "Welcome from Dav" section plays the self-hosted portrait intro `uploads/sacred-calling-intro-46s.mp4` (poster: `uploads/sacred-calling-intro-poster.jpg`). It uses controls and playsinline, and does not autoplay. The earlier YouTube Short (https://youtube.com/shorts/YZs51Z-6RjA) is no longer embedded; leave that link alone if past emails still use it.
+- Welcome: between the hero and the mission, a "Welcome from Dav" section plays the self-hosted portrait intro `uploads/sacred-calling-intro-46s.mp4`. The homepage thumbnail is `uploads/sacred-calling-intro-poster-v2.jpg` (the branded still, which already includes a play mark — do not add another play button on top). A click or tap on that still starts the video with controls and playsinline, and does not autoplay. Leave `uploads/sacred-calling-intro-poster.jpg` in place. The earlier YouTube Short (https://youtube.com/shorts/YZs51Z-6RjA) is no longer embedded; leave that link alone if past emails still use it.
 - Mission / Purpose: "Follow Me. Feed Them." and ministry purpose.
 - What We Do: Spiritual Direction, Coaching & Formation, Biblical Counseling, Gatherings & Community.
 - Booking: Zoom Scheduler embed for Spiritual Direction sessions with Dr. Davenport.
